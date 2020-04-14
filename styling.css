@@ -1,0 +1,52 @@
+body{
+	background-color: #444;
+}
+
+.book{
+	text-align: center;
+	perspective-origin: center;
+	perspective: 10000px;
+}
+
+#side-cover{
+	width: 60px;
+	transform-origin: right;
+	animation-name: rotateSide;
+	animation-duration: 1s;
+	transform: rotateY(90deg);
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+}
+
+@keyframes rotateSide{
+	to{
+		transform: rotateY(0deg);
+	}
+
+	from{
+		transform: rotateY(80deg);
+	}
+}
+
+#face-cover{
+	margin: 0px -6px;
+	width: 328px;
+	transform-origin: left;
+
+	animation-name: rotateFace;
+	animation-duration: 1s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+}
+
+
+@keyframes rotateFace{
+	from{
+		transform: rotateY(0deg);
+	}
+
+	to{
+		transform: rotateY(80deg);
+	}
+}
+
